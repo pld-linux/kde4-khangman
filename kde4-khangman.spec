@@ -3,17 +3,18 @@
 
 Summary:	K Desktop Environment - A hangman game
 Summary(pl_PL.UTF8):	K Desktop Environment - Gra w wisielca
-Name:		khangman
-Version:	4.7.3
+Name:		kde4-khangman
+Version:	4.8.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	0b981832cb8b38fa914af52b4a9a0757
+# Source0-md5:	a738b368d9a8516bb75b0d84f3285258
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdelibs-devel >= %{version}
-BuildRequires:	libkdeedu-devel >= %{version}
+BuildRequires:	kde4-libkdeedu-devel >= %{version}
 Obsoletes:	kde4-kdeedu-khangman < 4.6.99
+Obsoletes:	khangman <= 4.8.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,12 +49,12 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%find_lang %{name} --with-kde
+%find_lang %{orgname} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files -f %{name}.lang
+%files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/khangman
 %{_datadir}/apps/khangman
