@@ -5,7 +5,7 @@ Summary:	K Desktop Environment - A hangman game
 Summary(pl_PL.UTF8):	K Desktop Environment - Gra w wisielca
 Name:		kde4-khangman
 Version:	4.9.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
@@ -61,6 +61,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/khangman.kcfg
 %{_datadir}/config/khangman.knsrc
 %{_desktopdir}/kde4/khangman.desktop
-%{_iconsdir}/hicolor/scalable/apps/khangman.svgz
-%{_iconsdir}/hicolor/*x*/apps/khangman.png
+%{_iconsdir}/hicolor/scalable/apps/khangman*.svgz
+%{_iconsdir}/hicolor/*x*/apps/khangman*.png
 %{_mandir}/man6/khangman.6*
