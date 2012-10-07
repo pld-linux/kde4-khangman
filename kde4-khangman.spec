@@ -2,7 +2,7 @@
 %define		orgname		khangman
 
 Summary:	K Desktop Environment - A hangman game
-Summary(pl_PL.UTF8):	K Desktop Environment - Gra w wisielca
+Summary(pl.UTF-8):	K Desktop Environment - Gra w wisielca
 Name:		kde4-khangman
 Version:	4.9.1
 Release:	1
