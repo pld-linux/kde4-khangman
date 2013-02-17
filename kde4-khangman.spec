@@ -57,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{orgname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/khangman
+%attr(755,root,root) %{_libdir}/libkhangmanengine.so.*.*.*
+%attr(755,root,root) ghost %{_libdir}/libkhangmanengine.so.?
 %{_datadir}/apps/khangman
 %{_datadir}/config.kcfg/khangman.kcfg
 %{_datadir}/config/khangman.knsrc
