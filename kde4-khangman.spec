@@ -5,11 +5,12 @@ Summary:	K Desktop Environment - A hangman game
 Summary(pl.UTF-8):	K Desktop Environment - Gra w wisielca
 Name:		kde4-khangman
 Version:	4.14.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Science
 Source0:	http://download.kde.org/%{_state}/%{version}/src/%{orgname}-%{version}.tar.xz
 # Source0-md5:	52108ad0becfca7c39700aa46540d480
+Patch0:		x32.patch
 URL:		http://www.kde.org/
 BuildRequires:	kde4-kdelibs-devel >= %{version}
 BuildRequires:	kde4-libkdeedu-devel >= %{version}
@@ -34,6 +35,7 @@ lat lub więcej.
 
 %prep
 %setup -q -n %{orgname}-%{version}
+%patch0 -p1
 
 %build
 install -d build

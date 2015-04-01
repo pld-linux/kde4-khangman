@@ -1,0 +1,18 @@
+--- khangman-4.14.3/src/engine/CMakeLists.txt.orig	2015-04-01 11:30:04.000000000 +0000
++++ khangman-4.14.3/src/engine/CMakeLists.txt	2015-04-01 11:30:33.000000000 +0000
+@@ -6,11 +6,11 @@ set(CMAKE_MODULE_PATH
+ 
+ find_package(Qt4 4.7 REQUIRED)
+ 
+-if ("${QT_QTCORE_LIBRARY}" MATCHES lib64)
++if ("${QT_QTCORE_LIBRARY_RELEASE}" MATCHES lib64)
+    set(_Init_LIB_SUFFIX 64)
+-elseif ("${QT_QTCORE_LIBRARY}" MATCHES lib32)
+-   set(_Init_LIB_SUFFIX 32)
+-endif ("${QT_QTCORE_LIBRARY}" MATCHES lib64)
++elseif ("${QT_QTCORE_LIBRARY_RELEASE}" MATCHES libx32)
++   set(_Init_LIB_SUFFIX x32)
++endif ("${QT_QTCORE_LIBRARY_RELEASE}" MATCHES lib64)
+ 
+ set(LIB_SUFFIX
+     ${_Init_LIB_SUFFIX}
